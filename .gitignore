@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+env/
+ENV/
+.venv/
+
+# Airflow
+airflow.cfg
+airflow.db
+logs/
+plugins/
+/dags/__pycache__/
+*.log
+
+# Temporary CSV files
+temp.csv
+clean_temp.csv
+sales_temp.csv
+*.tmp
+*.temp
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
