@@ -6,7 +6,7 @@ def transform(raw_data):
         logging.info('transformation started')
         raw_data = raw_data.drop_duplicates()
 
-        raw_data['Customer Name'].fillna('unknown', inplace= True)
+        raw_data['Customer Name'] = raw_data['Customer Name'].fillna('unknown')
 
         # renaming columns
         raw_data.rename(columns={'Order Date' :'order_date',

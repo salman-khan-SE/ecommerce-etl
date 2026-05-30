@@ -4,7 +4,7 @@ from transform import transform
 from load import load
 import logging 
 
-logging.basicConfig(level=logging.INFO,filename='etl.log',format="%(asctime)s:%(levelname)s:%(message)s")
+logging.basicConfig(level=logging.INFO,filename='etl.log',filemode='w',format="%(asctime)s:%(levelname)s:%(message)s")
 
 
 def main():
