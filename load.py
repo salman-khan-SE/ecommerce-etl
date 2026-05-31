@@ -14,7 +14,7 @@ engine = create_engine(
     f'mysql+pymysql://{user}:{password}@localhost/ecommerce_etl'
 )
 
-def load(df,category_sales):
+def load(df):
     try:
         logging.info('loading started')
         df.to_sql(
@@ -22,12 +22,6 @@ def load(df,category_sales):
         con=engine,
         if_exists='replace',
         index=False
-        )
-        category_sales.to_sql(
-            'sales_summary',
-            con = engine,
-            if_exists= 'replace',
-            index= False
         )
         logging.info('data loaded')
         return df
