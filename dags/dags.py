@@ -14,15 +14,13 @@ def extract_task():
 def transform_task():
     import pandas as pd
     raw_data = pd.read_csv('temp.csv')
-    clean_data,category_sales = transform(raw_data)
+    clean_data= transform(raw_data)
     clean_data.to_csv('clean_temp.csv', index= False)
-    category_sales.to_csv('sales_temp.csv', index=False)
 
 def load_task():
     import pandas as pd
     clean_data = pd.read_csv('clean_temp.csv')
-    category_sales = pd.read_csv('sales_temp.csv')
-    load(clean_data,category_sales)
+    load(clean_data)
 
 
 dag = DAG(
