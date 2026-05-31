@@ -10,8 +10,8 @@ logging.basicConfig(level=logging.INFO,filename='etl.log',filemode='w',format="%
 def main():
     logging.info('pipeline started')
     raw_data = extract()
-    df,category_sales = transform(raw_data)
-    load(df,category_sales)
+    df = transform(raw_data)
+    load(df)
 
 if __name__ == '__main__':
 
